@@ -1,0 +1,6 @@
+[
+  { "file": "1-cover.png", "path": "/?demo=cover", "viewport": { "width": 1280, "height": 800 }, "note": "Checklist with the Positive Mental Attitude guide open, progress bar, filters and missable badge" },
+  { "file": "2-roadmap.png", "path": "/?view=roadmap", "viewport": { "width": 1280, "height": 800 }, "note": "Roadmap to the platinum: four stages, missable warning, 100% requirements" },
+  { "file": "3-spoiler.png", "path": "/?filter=story&spoiler=on", "viewport": { "width": 1280, "height": 800 }, "note": "Spoiler-free mode on the story filter: story trophy names and descriptions hidden until earned" },
+  { "file": "4-progress.png", "path": "/?demo=progress", "viewport": { "width": 1280, "height": 800 }, "note": "Tracker with 23 of 55 earned, the A Long Road guide open, export and import visible" }
+]
