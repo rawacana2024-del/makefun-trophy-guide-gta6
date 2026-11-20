@@ -1,0 +1,228 @@
+/* Leonida Trophy Guide — a dark Vice City look of its own: deep purple,
+   neon pink and gold. System fonts only, so the guide works fully offline. */
+:root {
+  --bg: #150a1e;
+  --panel: #221130;
+  --panel-2: #2c1840;
+  --line: #4a2b66;
+  --text: #f3eef7;
+  --muted: #c4b3d4;
+  --pink: #ff4fa3;
+  --gold: #f5c542;
+  --green: #58d68d;
+  --red: #ff6b6b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+.top {
+  background: linear-gradient(120deg, #2b0f45 0%, #5c1450 55%, #8a1d5e 100%);
+  border-bottom: 3px solid var(--pink);
+  padding: 22px 20px;
+}
+.top-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+h1 { margin: 0 0 4px; font-size: 34px; letter-spacing: 0.5px; }
+.subtitle { margin: 0; color: #e8d5f2; max-width: 560px; }
+.progress-box { min-width: 240px; }
+.progress-numbers { font-size: 20px; font-weight: 700; }
+.progress-bar {
+  height: 12px;
+  background: #3a1e52;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 6px 0;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--pink), var(--gold));
+  transition: width 0.3s;
+}
+.progress-note { font-size: 13px; color: var(--gold); }
+.views {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px 0;
+  display: flex;
+  gap: 10px;
+}
+.view-btn {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.view-btn.active { background: var(--pink); border-color: var(--pink); color: #fff; font-weight: 700; }
+main { max-width: 1100px; margin: 0 auto; padding: 16px 20px 40px; }
+.toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 12px;
+}
+#search {
+  flex: 1 1 240px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 15px;
+}
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 6px 13px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.chip.active { background: var(--pink); border-color: var(--pink); color: #fff; font-weight: 700; }
+.grade-label, .toggle { font-size: 14px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+select {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 7px;
+  font-size: 14px;
+}
+.actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; }
+button {
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+button:hover { border-color: var(--pink); }
+button.danger { color: var(--red); }
+.import-label {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.import-label input { display: none; }
+.saved-note { font-size: 13px; color: var(--muted); }
+.missable-callout {
+  background: #3d1a12;
+  border: 1px solid #a33d1e;
+  border-left: 4px solid #ff8c42;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 0 0 16px;
+}
+.online-note, .empty-note {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+}
+.trophy-list { display: flex; flex-direction: column; gap: 10px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.card.earned { border-color: var(--green); }
+.card-head { display: flex; gap: 12px; align-items: flex-start; }
+.card-check { width: 22px; height: 22px; margin-top: 3px; accent-color: var(--green); flex: none; cursor: pointer; }
+.card-title { flex: 1; min-width: 0; }
+.card-name { font-size: 18px; font-weight: 700; margin: 0; }
+.card-name .grade-badge { margin-left: 8px; }
+.card-desc { margin: 2px 0 0; color: var(--muted); font-style: italic; }
+.card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.tag {
+  font-size: 12px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 2px 9px;
+  color: var(--muted);
+}
+.tag.missable { background: #3d1a12; border-color: #a33d1e; color: #ffb08a; font-weight: 700; }
+.tag.unconfirmed { background: #3a2a10; border-color: #8a6d1d; color: #f5c542; }
+.grade-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  padding: 2px 7px;
+  vertical-align: middle;
+}
+.grade-platinum { background: #e8f4ff; color: #123; }
+.grade-gold { background: var(--gold); color: #231a00; }
+.grade-silver { background: #cfd6dd; color: #1a2430; }
+.grade-bronze { background: #c98a4b; color: #241503; }
+.guide-toggle {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: var(--pink);
+  font-weight: 700;
+  padding: 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+.guide-body { margin-top: 10px; border-top: 1px solid var(--line); padding-top: 10px; }
+.guide-body p { margin: 0 0 8px; }
+.guide-steps { margin: 0 0 8px 20px; padding: 0; }
+.guide-steps li { margin-bottom: 3px; }
+.guide-source { font-size: 13px; color: var(--muted); }
+.guide-source a { color: var(--pink); }
+.spoiler-hidden { color: var(--muted); font-style: italic; }
+h2 { font-size: 24px; margin: 28px 0 8px; }
+.roadmap-intro { color: var(--muted); }
+.roadmap { list-style: none; margin: 0; padding: 0; counter-reset: stage; }
+.roadmap > li {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--pink);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+.roadmap h3 { margin: 0 0 6px; font-size: 19px; }
+.stage-warn {
+  background: #3d1a12;
+  border: 1px solid #a33d1e;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.stage-list { font-size: 14px; color: var(--muted); }
+.facts { line-height: 1.9; }
+.sources-note { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 12px; }
+footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 30px;
+  color: var(--muted);
+  font-size: 13px;
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI 55 Trophies</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div>
+      <h1>Leonida Trophy Guide</h1>
+      <p class="subtitle">Every GTA VI trophy on PlayStation 5 — a checklist, a roadmap, and a guide for each one. Works fully offline.</p>
+    </div>
+    <div class="progress-box" id="progressBox">
+      <div class="progress-numbers"><span id="earnedCount">0</span> of 55 earned</div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-note" id="progressNote">Platinum: Vice Got a Price!</div>
+    </div>
+  </div>
+</header>
+
+<nav class="views">
+  <button type="button" class="view-btn active" data-view="list">Checklist</button>
+  <button type="button" class="view-btn" data-view="roadmap">Roadmap to Platinum</button>
+</nav>
+
+<main>
+  <section id="view-list">
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search a trophy or a guide…" aria-label="Search trophies">
+      <div class="chips" id="kindChips">
+        <button type="button" class="chip active" data-kind="all">All 55</button>
+        <button type="button" class="chip" data-kind="story">Story</button>
+        <button type="button" class="chip" data-kind="missable">Missable</button>
+        <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+        <button type="button" class="chip" data-kind="activities">Activities</button>
+        <button type="button" class="chip" data-kind="online">Online</button>
+      </div>
+      <label class="grade-label">Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="toggle"><input type="checkbox" id="hideEarned"> Hide earned</label>
+      <label class="toggle"><input type="checkbox" id="spoilerToggle"> Spoiler-free mode</label>
+    </div>
+    <div class="actions">
+      <button type="button" id="exportBtn">Export progress</button>
+      <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button type="button" id="resetBtn" class="danger">Reset progress</button>
+      <span class="saved-note" id="savedNote">Progress saves in this browser.</span>
+    </div>
+    <p class="missable-callout" id="missableCallout"><strong>Only one possibly missable trophy:</strong> Positive Mental Attitude — meditate at Jason’s house in Chapter 1, after the mission Down to Earth. Everything else can be done after the story. See the roadmap for the details.</p>
+    <div id="onlineNote" class="online-note" hidden>
+      <strong>No online trophies.</strong> All 55 trophies are single-player and offline — no PlayStation Plus, no multiplayer, no DLC needed.
+    </div>
+    <div id="emptyNote" class="empty-note" hidden>No trophies match these filters.</div>
+    <div id="trophyList" class="trophy-list"></div>
+  </section>
+
+  <section id="view-roadmap" hidden>
+    <h2>Roadmap to the Platinum</h2>
+    <p class="roadmap-intro">One playthrough is enough — about 200 hours. There is no mission replay, so keep a manual save at the start and end of each chapter (15 manual slots). Cheats disable trophies and saving, so leave them off. Track anything at any time with Touch Pad &gt; Progress.</p>
+    <ol class="roadmap">
+      <li>
+        <h3>Stage 1 — Play the story (60–80 hours)</h3>
+        <p>Finish Chapters 1–5 and let the story trophies pop on their own. While you play: scan new vehicles with the WAiNK app, study animals with the binoculars, and do optional missions as they appear (you need any 100 for the 100% checklist later).</p>
+        <p class="stage-warn"><strong>Do this in Chapter 1:</strong> after the mission Down to Earth, talk to Lucia in the kitchen in the morning, follow her to the balcony and choose Accept — the first meditation for Positive Mental Attitude, the only possibly missable trophy.</p>
+        <p class="stage-list">Trophies in this stage: the 12 story trophies, the final mission gold, and the Chapter 1 meditation.</p>
+      </li>
+      <li>
+        <h3>Stage 2 — Questlines and activities</h3>
+        <p>Finish the optional questlines: Andy, Kenton, Billy, Randy and Tyrone, plus Bret’s hunting. Then the activities: 250 stunts, gold in all 42 shooting range challenges, drone races at all 14 locations, 20 different races, and the 9 activity types for Master of None.</p>
+        <p class="stage-list">Trophies in this stage: Road to Rehabilitation, This Was No Boat Accident, The Lone Rider, Supply &amp; Demand, Spin On This!, Fair Game, Cunning Stunts, The Shootist, Top Fun, Earn Cash Not Kudos, Master of None, Baited My Tackle, Stick Fiddler, Hot Together, Retail Therapy, Whip It Good, Gunslinger, The Goodtime State.</p>
+      </li>
+      <li>
+        <h3>Stage 3 — Collectibles and cleanup</h3>
+        <p>Finish the 8 Strangers &amp; Freaks strands, 3 of 18 card sets, 100 WAiNK scans, 50 of 80 challenges, the bank vaults, gang operations and the miscellaneous trophies. Buy all 8 garages, register 10 vehicles, launder $250,000 in marked bills and spend $100,000 in shops.</p>
+        <p class="stage-list">Trophies in this stage: Strangers &amp; Freaks, Don’t Touch My Deck, You WAiNKer!, One Last Thing, Catch Me If You Can, Challenging Tank, Sneakthief, Maximum Withdrawal, A Classic Blitz Play, Pest Control, In The Beginning…, Capital Offense, Let’s Go Bowling, Personal Best, Actions Speak Louder, Bad Luck I Guess, The Truth Is Out There, Ten Pin, Dime on the Dollar, Treat Yo Self, Little Boxes, On the Spot.</p>
+      </li>
+      <li>
+        <h3>Stage 4 — 100% and the Platinum</h3>
+        <p>After the story, the 100% checklist opens at Progress &gt; Stats &gt; 100% Completion. It is lenient — about 60% true completion — and everything on it is still doable in free-roam. Finish it for A Long Road, then the platinum, Vice Got a Price!, unlocks automatically.</p>
+        <p class="stage-list">Trophies in this stage: A Long Road, then Vice Got a Price!</p>
+      </li>
+    </ol>
+    <h2>Missable trophies</h2>
+    <p>Only one trophy is possibly missable: <strong>Positive Mental Attitude</strong>. The Chapter 1 meditation at Jason’s house can be lost after Chapter 1, and guides have not confirmed whether it is required. Do it early and the risk is gone. Every other trophy can be earned after the story in free-roam — including all questlines, collectibles and activities.</p>
+    <h2>100% completion, at a glance</h2>
+    <ul class="facts">
+      <li>Any 100 optional missions (there are 200–300+)</li>
+      <li>Scan 200 of 277 base-model vehicles · study 100 of 255 animals</li>
+      <li>70 of 80 challenges · 300 stunts · all robberies, underwater discoveries, shooting ranges, drone races and Bret’s quests</li>
+      <li>All 8 bank jobs · 15 of 18 meditations</li>
+    </ul>
+    <p class="sources-note">Facts in this guide were researched from PowerPyx, Push Square, KeenGamer, Mobalytics and Sixshore; every trophy’s guide names its source. Guide text is written in our own words — sources are cited, never copied. Official trophy names and descriptions are shown as PlayStation publishes them.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Guide — an unofficial fan guide. Grand Theft Auto VI is © Rockstar Games. No official artwork or logos are used. Trophy names and descriptions are PlayStation’s. Built for the make.fun GTA 6 trophy guide bounty.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
